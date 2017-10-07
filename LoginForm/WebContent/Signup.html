@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function formValidate(){
+	var check=document.myform.email.value;
+	console.log(check)
+	if(check.search("@")>=0){
+		return true;
+	}
+	alert("Please enter valid email");
+	return false;
+}
+</script>
+</head>
+<body>
+<form name="myform" action="SignUp" method="post" onsubmit"return(formValidate())">
+<div><input type ="text" name="email" Placeholder="Email" required></div>
+<div><input type ="text" name="username" Placeholder="Username" required></div>
+<div><input type ="password" name="password" Placeholder="password" required></div>
+<div><input type ="text" name="mobileno" Placeholder="mobile No" required></div>
+<input type="submit" value="SignUp">
+</form>
+</body>
+</html>
