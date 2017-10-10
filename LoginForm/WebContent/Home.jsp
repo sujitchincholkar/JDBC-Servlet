@@ -16,9 +16,17 @@
    }
 	
 %>
-<h1>hello <%=session.getAttribute("name") %></h1>
-<p>Session id<%=session.getId() %></p>
-<p>Session Last Access<%=session.getLastAccessedTime() %>
-<a href="Logout">Logout</a>
+<nav class="navbar navbar-inverse">
+<ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><%=session.getAttribute("name") %></a></li>
+      <li><a href="Logout">Log Out</a></li>
+      </ul>
+</nav>
+
+<%-- <p>Session id<%=session.getId() %></p>
+<p>Session Last Access<%=session.getLastAccessedTime() %> --%>
 </body>
 </html>

@@ -37,12 +37,17 @@ public class SessionFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
-		HttpServletRequest  httpRequest= (HttpServletRequest) request;
+		//HttpServletRequest  httpRequest= (HttpServletRequest) request;
 		HttpServletResponse httpResponse= (HttpServletResponse) response ;
-		HttpSession session=httpRequest.getSession(false);
-		
+		//HttpSession session=httpRequest.getSession(false);
+		System.out.println("Inside filter");
+		httpResponse.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+		httpResponse.setHeader("Pragma", "no-cache"); // HTTP 1.0.
+		httpResponse.setDateHeader("Expires", 0); // Proxies.
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
+	
+		
 	}
 
 	/**

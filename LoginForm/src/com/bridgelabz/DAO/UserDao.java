@@ -14,7 +14,7 @@ public class UserDao {
 		Connection connection=null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			String URL="jdbc:mysql://localhost:3306/keep";
+			String URL="jdbc:mysql://localhost:3306/Keep";
 			String username="root";
 			String password="root";
 			connection=DriverManager.getConnection(URL,username,password);
@@ -67,17 +67,22 @@ public class UserDao {
 		}
 		return rowsAffected;
 	}
-	/*public static void getUser(String email){
+	/*public static int updateUser(User user){
+		int status=0;
 		Connection connection=getConnection();
-		String query="select from userinfo where email=?";
+		String query="update userinfo set name=?,email=?,password=?,mobileNo=? where id=?";
 		try {
-			PreparedStatement ps=connection.prepareStatement(query);
-			ps.setString(1, email);
-			ResultSet rs=ps.executeQuery();
+			PreparedStatement prepareStatment=connection.prepareStatement(query);
+			prepareStatment.setString(1, user.getEmail());
+			prepareStatment.setString(1, user.getName());
+			prepareStatment.setString(1, user.getPassword());
+			prepareStatment.setString(1, user.getMobileno());
+			status=prepareStatment.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return status;
 	}*/
 
 }
