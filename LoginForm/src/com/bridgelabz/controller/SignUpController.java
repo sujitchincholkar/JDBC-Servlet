@@ -51,7 +51,7 @@ public class SignUpController extends HttpServlet {
 		int status=UserDao.insertUser(user);
 		if(status>0){
 			out.println("Signup successful!");
-			response.sendRedirect("Login.html");
+			response.sendRedirect("Login.jsp");
 		}else{
 			out.println("ReEnter data some error occured");
 			request.getRequestDispatcher("Signup.html").include(request,response);

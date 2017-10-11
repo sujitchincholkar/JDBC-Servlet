@@ -15,13 +15,16 @@
 		var check = document.myform.email.value;
 		var password = document.getElementById("pwd").value;
 		var mobile = document.getElementById("no").value;
-
+		var emailValidation=/^
 		if (password.length < 8) {
-			alert("Password must contain atleast 8 character");
+			document.getElementById("pwderr").innerHTML="Password must contain 8 characters"
 			return false;
 		} else if (mobile.length < 10) {
-			alert("Please enter valid mobile number");
+			document.getElementById("noerr").innerHTML="Invalid Mobile";
 			return false;
+		}else if(){
+				
+		}
 		}
 		return true;
 	}
@@ -30,7 +33,7 @@
 
 </style>
 </head>
-<body>
+<body >
 <div class="Container">
 <h3>Sign up</h3>
 	<form name="myform" action="SignUp" method="post"
@@ -39,7 +42,7 @@
 			<div class="panel-heading">Sign Up</div>
 			<div class="panel-body"> -->
 				<div class="row">
-					<div class="col-sm-8">
+					<div class="col-sm-10">
 						<div class="form-group">
 							<label for="email">Email:</label>
 							<input type="email" name="email" Placeholder="Enter Email"
@@ -49,7 +52,7 @@
 				</div>
 				<div>
 					<div class="row">
-						<div class="col-sm-8">
+						<div class="col-sm-10">
 							<div class="form-group">
 							<label for="name">Name:</label>
 								<input type="text" name="username" Placeholder="Enter Username"
@@ -59,21 +62,23 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-8">
+					<div class="col-sm-10">
 						<div class="form-group">
 						<label for="pwd">Password:</label>
 							<input type="password" name="password" Placeholder="Enter password"
 								id="pwd" class="form-control" required>
+							<font color="red"><span id="pwderr" ></span></font>	
 						</div>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="col-sm-8">
+					<div class="col-sm-10">
 						<div class="form-group">
 						<label for="no">Mobile No:</label>
-							<input type="text" name="mobileno" Placeholder="Mobile Number"
+							<input type="number" name="mobileno" Placeholder="Mobile Number"
 								id="no" pattern="\d{10}" class="form-control" required>
+								<font color="red"><span id="noerr" ></span></font>	
 						</div>
 					</div>
 				</div>

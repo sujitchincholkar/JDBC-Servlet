@@ -33,10 +33,10 @@ public class Logout extends HttpServlet {
 		session.removeAttribute("name");
 		session.removeAttribute("id");
 		session.invalidate();
-		response.sendRedirect("Login.html");
+		response.sendRedirect("Login.jsp");
 		}
 		else{
-			response.sendRedirect("Login.html");
+			response.sendRedirect("Login.jsp");
 		}
 	}
 

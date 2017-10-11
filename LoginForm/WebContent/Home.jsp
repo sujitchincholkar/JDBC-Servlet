@@ -12,7 +12,7 @@
 <body>
 <% 
    if(session.getAttribute("name")==null){
-	   response.sendRedirect("Login.html");
+	   response.sendRedirect("Login.jsp");
    }
 	
 %>

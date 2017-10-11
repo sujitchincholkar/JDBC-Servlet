@@ -44,12 +44,15 @@ public class LoginController extends HttpServlet {
 		User user=UserDao.getUser(email, password);
 		System.out.println("In the login section");
 		if(user==null){
-			response.sendRedirect("Login.html");
+			HttpSession session=request.getSession();
+			session.setAttribute("error", "Invalid username or password");
+			response.sendRedirect("Login.jsp");
 		}else{
 			HttpSession session=request.getSession();
 			session.setAttribute("id", user.getId());
 			session.setAttribute("name",user.getName());
-			request.getRequestDispatcher("Home.jsp").include(request,response);
+			//request.getRequestDispatcher("Home.jsp").include(request,response);
+			response.sendRedirect("Home.jsp");
 		}
 		
 	}

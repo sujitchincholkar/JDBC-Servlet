@@ -1,25 +1,31 @@
-.panel {
-	box-shadow: 0 0 50px black;
+
+a{
+	
 }
-a {
-	margin: 5px;	
-}
-body{
-	color:#C9CAC8;
+body,html{
+	background-color:#E6E7DA;
 }
 h3{
+
 	background-color:#2AB299 ;
+	margin-top:1px;
 	padding-left:10px;
 	padding-top:10px;
 	padding-right:40px;
 	padding-bottom:10px;
 	box-shadow: 0 0 5px green;
 }
+button{
+	width:80%;
+	margin-left: 20px;
+}
 form{
 	margin-left:30px;
+	background-color: #FBFBF1 ;
 }
 .Container{
-	border-radius: 10px;
+    background-color: #FBFBF1;
+    border-radius:10px ;
 	position:absolute;
 	margin: auto;
 	top: 0;
@@ -29,4 +35,20 @@ form{
 	max-width: 400px;
 	max-height: 450px;
 	box-shadow: 0 0 10px black;
+}
+.btn-margin{
+	margin-left:30px;
+}
+.form-group{
+	width:95%;
+}
+.btn-center{
+	margin-bottom:10px;
+	text-align:center;
+}
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
