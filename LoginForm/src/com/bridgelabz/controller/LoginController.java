@@ -51,7 +51,7 @@ public class LoginController extends HttpServlet {
 			HttpSession session=request.getSession();
 			session.setAttribute("id", user.getId());
 			session.setAttribute("name",user.getName());
-			//request.getRequestDispatcher("Home.jsp").include(request,response);
+			//request.getRequestDispatcher("/Home.jsp").forward(request,response);
 			response.sendRedirect("Home.jsp");
 		}
 		

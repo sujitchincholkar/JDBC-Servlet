@@ -14,7 +14,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="Container">
+	<div class="Container" style="max-height:350px">
 	
 		<div class="row">
 			<div class="col-sm-12">
@@ -52,7 +52,8 @@
 			</div>
 			<div class="btn-center">
 				<div class="row">
-					<div class="col-sm-10">
+				
+					<div class="col-sm-12">
 						<button type="submit" class="btn btn-danger">Login</button>
 					</div>
 				</div>
@@ -61,7 +62,8 @@
 		<div class="btn-margin">
 		<div class="btn-center">
 			<div class="row">
-				<div class="col-sm-10">
+			
+				<div class="col-sm-12">
 
 					<a href="Signup.html">
 

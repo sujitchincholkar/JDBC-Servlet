@@ -10,24 +10,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-	function formValidate() {
-		var check = document.myform.email.value;
-		var password = document.getElementById("pwd").value;
-		var mobile = document.getElementById("no").value;
-		var emailValidation=/^
-		if (password.length < 8) {
-			document.getElementById("pwderr").innerHTML="Password must contain 8 characters"
-			return false;
-		} else if (mobile.length < 10) {
-			document.getElementById("noerr").innerHTML="Invalid Mobile";
-			return false;
-		}else if(){
-				
-		}
-		}
-		return true;
-	}
+<script type="text/javascript" src="JS/FormValidator.js">
+	
 </script>
 <style>
 
@@ -45,8 +29,9 @@
 					<div class="col-sm-10">
 						<div class="form-group">
 							<label for="email">Email:</label>
-							<input type="email" name="email" Placeholder="Enter Email"
+							<input type="text" name="email" Placeholder="Enter Email"
 								class="form-control" id="email" required>
+								<font color="red"><span id="emailerr"></span></font>	
 						</div>
 					</div>
 				</div>
@@ -77,7 +62,7 @@
 						<div class="form-group">
 						<label for="no">Mobile No:</label>
 							<input type="number" name="mobileno" Placeholder="Mobile Number"
-								id="no" pattern="\d{10}" class="form-control" required>
+								id="no"  class="form-control" required>
 								<font color="red"><span id="noerr" ></span></font>	
 						</div>
 					</div>
